@@ -3,12 +3,12 @@ import { useState } from 'react'
 //import viteLogo from '/vite.svg'
 import './App.css'
 import PokeBox from './components/PokeBox'
-import ChangeSprites from './components/ChangeSprites'
+//import ChangeSprites from './components/ChangeSprites'
 
 function App() {
 
   //const [version, setVersion] = useState<"rb" | "y">("rb")
-  const [version, setVersion] = useState<"frlg" | "e">("frlg")
+  //const [version, setVersion] = useState<"frlg" | "e">("frlg")
 
   /*const redExclusives =
    [{num: 23, alt: "Ekans"},
