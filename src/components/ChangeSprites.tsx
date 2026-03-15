@@ -1,7 +1,8 @@
 type ChangeSpritesProps =
 {
-    version: "rb" | "y"
-    setVersion: React.Dispatch<React.SetStateAction<"rb" | "y">>
+    //version: "rb" | "y"
+    version: "frlg" | "e"
+    setVersion: React.Dispatch<React.SetStateAction<"frlg" | "e">>
 }
 
 function ChangeSprites({version, setVersion}: ChangeSpritesProps)
@@ -17,12 +18,12 @@ function ChangeSprites({version, setVersion}: ChangeSpritesProps)
 
     function toggleVersion()
     {
-        setVersion(version == "rb" ? "y" : "rb")
+        setVersion(version == "frlg" ? "e" : "frlg")
     }
 
   return (
     <>
-        <button style={styleButton} onClick={toggleVersion}>{version == "rb" ? "Yellow" : "Red/Blue"}<br></br>Sprites</button>
+        <button style={styleButton} onClick={toggleVersion}>{version == "frlg" ? "Yellow" : "Red/Blue"}<br></br>Sprites</button>
     </>
   )
 }

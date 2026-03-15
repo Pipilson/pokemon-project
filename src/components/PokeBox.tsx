@@ -2,10 +2,12 @@ import { useState } from "react"
 
 type PokeBoxProps =
 {
-  exclusiveTo: "red" | "blue",
+  //exclusiveTo: "red" | "blue",
+  exclusiveTo: "firered" | "leafgreen"
   pokeNum?: number,
   alt?: string,
-  version: "rb" | "y"
+  version: "frlg" | "e"
+  //version: "rb" | "y"
 }
 
 function PokeBox({exclusiveTo, pokeNum=0, alt="", version}: PokeBoxProps)
@@ -18,22 +20,28 @@ function PokeBox({exclusiveTo, pokeNum=0, alt="", version}: PokeBoxProps)
 
   const games =
   {
-    red: "rgb(218, 57, 20)",
-    blue: "rgb(46, 80, 216)"
+    //red: "rgb(218, 57, 20)",
+    //blue: "rgb(46, 80, 216)",
+    firered: "rgb(241, 92, 1)",
+    leafgreen: "rgb(159, 220, 0)"
   }
 
   const divStyle: React.CSSProperties =
   {
-    width: "120px", //original- 60px
-    height: "120px",
+    //width: "120px", //original- 60px
+    //height: "120px",
+    width: "128px", //original- 64px
+    height: "128px",
     background: games[exclusiveTo]
   }
 
   const imgStyle: React.CSSProperties =
   {
-    paddingTop: "2px",
-    width: "112px", //original- 56px
-    height: "112px",
+    //paddingTop: "2px",
+    //width: "112px", //original- 56px
+    //height: "112px",
+    width: "128px",
+    height: "128px",
     filter: caught ? "brightness(100%)" : "brightness(50%)",
     //opacity: caught ? 1 : 0.5
   }
@@ -48,7 +56,7 @@ function PokeBox({exclusiveTo, pokeNum=0, alt="", version}: PokeBoxProps)
 
   return (
     <div style={divStyle} onClick={toggleCaught}>
-      <img style={imgStyle} alt={alt} src={`https://raw.githubusercontent.com/Pipilson/pokemon-db/refs/heads/main/img/gen1/${version}/${num}.png`}></img>
+      <img style={imgStyle} alt={alt} src={`https://raw.githubusercontent.com/Pipilson/pokemon-db/refs/heads/main/img/gen3/${version}/${num}.png`}></img>
     </div>
   )
 }
