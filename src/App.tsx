@@ -95,10 +95,10 @@ function App() {
       {/* <ChangeSprites version={version} setVersion={setVersion}></ChangeSprites> */}
       <div id='main'>
         <div>
-          {fireredExclusives.map((poke) => (<PokeBox exclusiveTo='firered' pokeNum={poke.num} alt={poke.alt} version={version}></PokeBox>))}
+          {fireredExclusives.map((poke) => (<PokeBox exclusiveTo='firered' pokeNum={poke.num} alt={poke.alt} /*version={version}*/></PokeBox>))}
         </div>
         <div>
-          {leafgreenExclusives.map((poke) => (<PokeBox exclusiveTo='leafgreen' pokeNum={poke.num} alt={poke.alt} version={version}></PokeBox>))}
+          {leafgreenExclusives.map((poke) => (<PokeBox exclusiveTo='leafgreen' pokeNum={poke.num} alt={poke.alt} /*version={version}*/></PokeBox>))}
         </div>
       </div>
     </>

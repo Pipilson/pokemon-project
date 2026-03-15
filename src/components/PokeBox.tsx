@@ -6,11 +6,11 @@ type PokeBoxProps =
   exclusiveTo: "firered" | "leafgreen"
   pokeNum?: number,
   alt?: string,
-  version: "frlg" | "e"
+  //version: "frlg" | "e"
   //version: "rb" | "y"
 }
 
-function PokeBox({exclusiveTo, pokeNum=0, alt="", version}: PokeBoxProps)
+function PokeBox({exclusiveTo, pokeNum=0, alt=""/*, version*/}: PokeBoxProps)
 {
   const [caught, setCaught] = useState(() =>
     {
@@ -56,7 +56,8 @@ function PokeBox({exclusiveTo, pokeNum=0, alt="", version}: PokeBoxProps)
 
   return (
     <div style={divStyle} onClick={toggleCaught}>
-      <img style={imgStyle} alt={alt} src={`https://raw.githubusercontent.com/Pipilson/pokemon-db/refs/heads/main/img/gen3/${version}/${num}.png`}></img>
+      {/* <img style={imgStyle} alt={alt} src={`https://raw.githubusercontent.com/Pipilson/pokemon-db/refs/heads/main/img/gen3/${version}/${num}.png`}></img> */}
+      <img style={imgStyle} alt={alt} src={`https://raw.githubusercontent.com/Pipilson/pokemon-db/refs/heads/main/img/gen3/frlg/${num}.png`}></img>
     </div>
   )
 }
